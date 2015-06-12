@@ -1,0 +1,16 @@
+<h1>Chat rooms</h1>
+
+<div class="list-group">
+<% @rooms.each do |room| %>
+  <%= link_to room_path(room), class: "list-group-item" do %>
+    <span class="badge"><%= room.messages.count %></span><%= room.name %>
+  <% end %>
+<% end %>
+</div>
+
+<%= form_for(Room.new) do |f| %>
+  <div class="form-group">
+    <%= f.text_field :name, class: "form-control", placeholder: "Room name" %>
+  </div>
+  <%= f.submit "Create Room", class: "btn btn-primary" %>
+<% end %>
