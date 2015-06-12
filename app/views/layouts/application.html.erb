@@ -10,8 +10,10 @@
 
   <%= render "header" %>
   <div class="container">
-    <%= content_tag :div, alert, class: "flash bg-danger" if alert %>
-    <%= content_tag :div, notice, class: "flash bg-success" if notice %>
+    <div id="alerts">
+      <%= content_tag :div, alert, class: "alert alert-danger" if alert %>
+      <%= content_tag :div, notice, class: "alert alert-success" if notice %>
+    </div>
     <%= yield %>
   </div>
 

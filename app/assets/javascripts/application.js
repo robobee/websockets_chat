@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require mustache
+//= chat_websocket
 //= require_tree .
