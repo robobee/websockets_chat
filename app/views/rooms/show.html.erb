@@ -13,7 +13,7 @@
           </div>
           <div class="media-body">
             <h4 class="media-heading">
-              <%= msg.user.email %>,<small> <%= msg.created_at %></small>
+              <%= msg.user.email %>,<small> <%= I18n.l(msg.created_at, format: :myformat) %></small>
             </h4>
             <p><%= msg.text.html_safe %></p>
           </div>

@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  time:
+    formats:
+      myformat: '%a, %e %b %Y %I:%M:%S GMT'

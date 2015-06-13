@@ -56,19 +56,21 @@ ChatSocket.prototype.sendMessage = function(message) {
 };
 
 ChatSocket.prototype.msgOk = function() {
+  var d = new Date();
   $('#messages').append(Mustache.render(this.message_template, {
     user_id: this.user_id,
     user_email: this.user_email,
-    time: 12345,
+    time: d.toUTCString(),
     message: this.message
   }));
 };
 
 ChatSocket.prototype.newMessage = function(user_id, user_email, text) {
+  var d = new Date();
   $('#messages').append(Mustache.render(this.message_template, {
     user_id: user_id,
     user_email: user_email,
-    time: 12345,
+    time: d.toUTCString(),
     message: text
   }));
 };
