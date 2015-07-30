@@ -16,6 +16,7 @@ ChatSocket.prototype.initBinds = function() {
   this.form.submit(function(e) {
     e.preventDefault();
     _this.sendMessage($("#message_text").val());
+    _this.form[0].reset();
   });
 
   this.socket.onmessage = function(e) {
