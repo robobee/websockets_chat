@@ -3,7 +3,7 @@ var ChatSocket = function(user_id, room_id, user_email, form) {
   this.user_email = user_email;
   this.room_id = room_id;
   this.form = form;
-  this.message_template = '<div class="media"><div class="media-left media-middle"><img class="media-object" src="http://lorempixel.com/64/64/people/"></div><div class="media-body"><h4 class="media-heading">{{user_email}},<small> {{time}}</small></h4><p>{{message}}</p></div></div>';
+  this.message_template = '<div class="media"><div class="media-left media-middle"><img class="media-object" src="http://placekitten.com/g/64/64"></div><div class="media-body"><h4 class="media-heading">{{user_email}},<small> {{time}}</small></h4><p>{{message}}</p></div></div>';
 
   this.socket = new WebSocket(App.websocket_host + "rooms/" + this.room_id);
 
